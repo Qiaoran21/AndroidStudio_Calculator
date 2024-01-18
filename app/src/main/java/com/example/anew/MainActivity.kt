@@ -53,7 +53,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-//    var newNumber = ""
     var num1 = ""
     var num2 = ""
     var result = ""
@@ -79,7 +78,6 @@ class MainActivity : AppCompatActivity() {
 
     fun equals(textView: TextView) {
         if (num1.isNotEmpty() && num2.isNotEmpty()) {
-            //num2 = newNumber
 
             when(action) {
                 "add" -> result = (num2.toDouble() + num1.toDouble()).toString()
