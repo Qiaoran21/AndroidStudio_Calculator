@@ -16,6 +16,7 @@
         android:text="0000"
         android:textColor="@color/pink"
         android:textSize="30sp"
+        android:textAlignment="viewEnd"
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"

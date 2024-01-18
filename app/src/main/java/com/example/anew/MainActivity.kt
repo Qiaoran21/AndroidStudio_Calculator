@@ -58,27 +58,26 @@ class MainActivity : AppCompatActivity() {
     var result = ""
     var action = ""
 
-    fun numButtonClicked(button: Button, textView: TextView, number: String) {
+    private fun numButtonClicked(button: Button, textView: TextView, number: String) {
         button.setOnClickListener {
             num1 += number
             textView.text = num1
         }
     }
 
-    fun clear(textView: TextView) {
+    private fun clear(textView: TextView) {
         num1 = ""
         textView.text = ""
     }
 
-    fun action(operator: String) {
+    private fun action(operator: String) {
         num2 = num1
         num1 = ""
         action = operator
     }
 
-    fun equals(textView: TextView) {
+    private fun equals(textView: TextView) {
         if (num1.isNotEmpty() && num2.isNotEmpty()) {
-
             when(action) {
                 "add" -> result = (num2.toDouble() + num1.toDouble()).toString()
                 "subtract" -> result = (num2.toDouble() - num1.toDouble()).toString()
@@ -86,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                 "multiple" -> result = (num2.toDouble() * num1.toDouble()).toString()
             }
             textView.text = result
+            num1 = result
         }
     }
 }
